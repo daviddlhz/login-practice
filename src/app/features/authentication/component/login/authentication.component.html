@@ -1,0 +1,14 @@
+<div class="container">
+    <form class="flex flex-col justify-center mb-32" [formGroup]="authenticationForm">
+        <h1 class="text-2xl font-bold mb-6 text-center">Login</h1>
+        <label for="email" class="block" hlmLabel>
+            Email
+            <input type="email" class="mt-1.5 w-full" placeholder="Email address" formControlName="email" hlmInput />
+        </label>
+        <label for="password" class="block mt-6" hlmLabel>
+            Password
+            <input type="password" class="mt-1.5 w-full" placeholder="Password" formControlName="password" hlmInput />
+        </label>
+        <button class="mt-5" type="submit" (click)="authenticate()" hlmBtn>Login</button>
+    </form>
+</div>
