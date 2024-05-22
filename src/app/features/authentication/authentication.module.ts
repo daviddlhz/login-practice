@@ -6,6 +6,8 @@ import { HlmLabelDirective } from "@spartan-ng/ui-label-helm";
 import { HlmInputDirective } from "@spartan-ng/ui-input-helm";
 import { HlmButtonDirective } from "@spartan-ng/ui-button-helm";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
+import {AuthenticationService} from "@core/services/authentication.services";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [AuthenticationComponent],
@@ -15,8 +17,10 @@ import { FormsModule, ReactiveFormsModule } from "@angular/forms";
     HlmInputDirective,
     HlmButtonDirective,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   exports: [AuthenticationComponent],
+  providers: [AuthenticationService]
 })
 export class AuthenticationModule {}
